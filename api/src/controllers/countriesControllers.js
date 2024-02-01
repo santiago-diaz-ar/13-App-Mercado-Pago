@@ -7,12 +7,28 @@ const getAllCountries = async () => {
   return countriesManejado;
 };
 
-const getDetailCountries = async (name) => {
+const getDetailCountries = async (id) => {
   const paisDetailApi = await axios.get(
-    `https://restcountries.com/v3.1/name/${name}`
+    `https://restcountries.com/v3.1/alpha/${id}  `
   );
   const paisDetail = paisDetailApi.data;
   return paisDetail;
 };
 
-module.exports = { getAllCountries, getDetailCountries };
+const getNamePais = async (name) => {
+  const paisNameApi = await axios.get(
+    `https://restcountries.com/v3.1/name/${name}`
+  );
+  return paisNameApi;
+};
+
+const postPaisDb = async (name) => {
+  return true;
+};
+
+module.exports = {
+  getAllCountries,
+  getDetailCountries,
+  getNamePais,
+  postPaisDb,
+};
