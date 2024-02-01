@@ -2,16 +2,11 @@ const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
   // defino el modelo
-  sequelize.define("country", {
+  sequelize.define("Country", {
     id: {
-      type: DataTypes.STRING(3),
+      type: DataTypes.UUID,
       primaryKey: true,
-      allowNull: false,
-      defaultValue: () =>
-        Math.floor(Math.random() * 16777215)
-          .toString(16)
-          .padStart(6, "0"),
-      unique: true,
+      defaultValue: DataTypes.UUIDV4,
     },
     name: {
       type: DataTypes.STRING,
@@ -19,15 +14,15 @@ module.exports = (sequelize) => {
     },
     imagenBandera: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     continente: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     capital: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
     },
     subregion: {
       type: DataTypes.STRING,
@@ -37,7 +32,13 @@ module.exports = (sequelize) => {
     },
     poblacion: {
       type: DataTypes.STRING,
-      allowNull: false,
+      /* allowNull: false, */
+    },
+    dificultad: {
+      type: DataTypes.STRING,
+    },
+    duracion: {
+      type: DataTypes.STRING,
     },
   });
 };

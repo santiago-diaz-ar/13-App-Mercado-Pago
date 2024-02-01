@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define("country", {
+  sequelize.define("Activity", {
     id: {
       type: DataTypes.UUID,
       primaryKey: true,
@@ -16,7 +16,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     duracion: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.STRING,
     },
     temporada: {
       type: DataTypes.STRING,

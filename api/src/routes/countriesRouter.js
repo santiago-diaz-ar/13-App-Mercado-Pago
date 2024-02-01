@@ -38,7 +38,7 @@ PaisesRouter.get("/:name", async (req, res) => {
   }
 });
 
-PaisesRouter.post("/", async (req, res) => {
+PaisesRouter.post("/addPais", async (req, res) => {
   const { name } = req.body;
   try {
     const datos = await postPaisDb(name);

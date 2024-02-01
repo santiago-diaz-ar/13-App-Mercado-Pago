@@ -1,5 +1,7 @@
 const axios = require("axios");
 
+const { Country } = require("../db");
+
 const getAllCountries = async () => {
   const countriesApi = await axios("https://restcountries.com/v3.1/all");
   const countriesManejado = countriesApi.data;
@@ -23,7 +25,10 @@ const getNamePais = async (name) => {
 };
 
 const postPaisDb = async (name) => {
-  return true;
+  const creacion = await Country.create({
+    name,
+  });
+  return creacion;
 };
 
 module.exports = {
