@@ -7,4 +7,12 @@ const getAllCountries = async () => {
   return countriesManejado;
 };
 
-module.exports = { getAllCountries };
+const getDetailCountries = async (name) => {
+  const paisDetailApi = await axios.get(
+    `https://restcountries.com/v3.1/name/${name}`
+  );
+  const paisDetail = paisDetailApi.data;
+  return paisDetail;
+};
+
+module.exports = { getAllCountries, getDetailCountries };
