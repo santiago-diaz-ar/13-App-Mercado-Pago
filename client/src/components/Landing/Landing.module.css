@@ -1,0 +1,7 @@
+.container {
+  border: 3px solid red;
+  height: 100vb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
