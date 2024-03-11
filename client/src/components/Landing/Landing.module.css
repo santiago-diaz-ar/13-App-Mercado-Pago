@@ -1,7 +1,32 @@
 .container {
-  border: 3px solid red;
   height: 100vb;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("../../img/fondos\ de\ app\ /photo-1477346611705-65d1883cee1e.avif");
+  background-size: cover;
+}
+
+.tarjeta {
+  border: 3px solid rgb(19, 19, 84);
+  height: 10rem;
+  border-radius: 0.6rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url("../../img/fondos\ de\ app\ /photo-1477346611705-65d1883cee1e.avif");
+  background-size: cover;
+}
+
+.botonCompras {
+  height: 3rem;
+  border-radius: 0.6em;
+  cursor: pointer;
+  background-color: rgb(19, 19, 84);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 3px solid rgb(19, 19, 84);
 }

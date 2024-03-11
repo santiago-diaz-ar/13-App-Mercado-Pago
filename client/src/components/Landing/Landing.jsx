@@ -4,8 +4,14 @@ import style from "./Landing.module.css";
 function Landing() {
   return (
     <div className={style.container}>
-      <div>Elizalde construcciones s.a.s</div>,
-      <div>Ingrewsa si quieres cotizar un terreno</div>
+      <div className={style.tarjeta}>
+        <strong>Elizalde construcciones s.a.s</strong>
+        <br />
+        <br />
+        <button className={style.botonCompras}>
+          <div>Comprar en Mercado Pago</div>
+        </button>
+      </div>
     </div>
   );
 }
