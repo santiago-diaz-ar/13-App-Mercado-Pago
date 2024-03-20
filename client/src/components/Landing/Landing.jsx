@@ -8,9 +8,7 @@ function Landing() {
         <strong>Elizalde construcciones s.a.s</strong>
         <br />
         <br />
-        <button className={style.botonCompras}>
-          <div>Comprar en Mercado Pago</div>
-        </button>
+        <button className={style.botonCompras}>Comprar en Mercado Pago</button>
       </div>
     </div>
   );
