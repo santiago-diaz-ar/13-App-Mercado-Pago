@@ -34,7 +34,7 @@ function Landing() {
   return (
     <div className={style.container}>
       <div className={style.tarjeta}>
-        <strong>Elizalde construcciones s.a.s</strong>
+        <strong>Santiago Ventas de sofware</strong>
         <br />
         <br />
         <button onClick={handleBy} className={style.botonCompras}>
