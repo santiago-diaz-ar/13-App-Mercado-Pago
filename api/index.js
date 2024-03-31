@@ -6,13 +6,15 @@ import { MercadoPagoConfig, Preference } from "mercadopago";
 const client = new MercadoPagoConfig({ accessToken: "YOUR_ACCESS_TOKEN" });
 
 const app = express();
-const port = 3000;
+const port = 3002;
 
 app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  return res.status(200).json("Hello Word ! Llego Papi");
+  return res
+    .status(200)
+    .json("Codigo de Back Para Compras Listo y a la Esperza de Compra");
 });
 
 app.post("/create_preference", async (req, res) => {
