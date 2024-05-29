@@ -6,7 +6,6 @@ import { MercadoPagoConfig, Preference } from "mercadopago";
 const client = new MercadoPagoConfig({ accessToken: "YOUR_ACCESS_TOKEN" });
 
 const app = express();
-const port = 3002;
 
 app.use(cors());
 app.use(express.json());
@@ -43,6 +42,6 @@ app.post("/create_preference", async (req, res) => {
   }
 });
 
-app.listen(port, () => {
+app.listen(3001, () => {
   console.log(`Servidor Escuchando en el puerto ${port}`);
 });
