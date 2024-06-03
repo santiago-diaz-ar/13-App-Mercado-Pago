@@ -5,14 +5,14 @@ import { useState } from "react";
 import axios from "axios";
 
 function Landing() {
-  const [preferenceId, setPreferenceId] = useState();
-  initMercadoPago("YOUR_PUBLIC_KEY", {
+  const [preferenceId, setPreferenceId] = useState(null);
+  initMercadoPago("TEST-48734d0e-5f82-419b-ad88-5cf4dc441eae", {
     locale: "es-AR",
   });
 
   const createPreference = async () => {
     try {
-      const response = await axios.post("compraraR6/v1", {
+      const response = await axios.post("/prueba", {
         title: "R6",
         quantify: 1,
         price: 100,
@@ -34,19 +34,17 @@ function Landing() {
   return (
     <div className={style.container}>
       <div className={style.tarjeta}>
-        <strong>Santiago Ventas de sofware</strong>
+        <strong>Developers Colombia</strong>
         <br />
         <br />
         <button onClick={handleBy} className={style.botonCompras}>
-          Comprar Yamaha R6
+          add Moto
         </button>
 
-        {preferenceId && (
-          <Wallet
-            initialization={{ preferenceId: preferenceId }}
-            customization={{ texts: { valueProp: "smart_option" } }}
-          />
-        )}
+        <Wallet
+          initialization={{ preferenceId: preferenceId }}
+          customization={{ texts: { valueProp: "smart_option" } }}
+        />
       </div>
     </div>
   );

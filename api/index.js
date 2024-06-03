@@ -3,7 +3,10 @@ import cors from "cors";
 
 import { MercadoPagoConfig, Preference } from "mercadopago";
 
-const client = new MercadoPagoConfig({ accessToken: "YOUR_ACCESS_TOKEN" });
+const client = new MercadoPagoConfig({
+  accessToken:
+    "TEST-7814052316154705-052822-c70269b4bb21e2a81eabf32d5128b70a-506563188",
+});
 
 const app = express();
 
@@ -11,19 +14,17 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  return res
-    .status(200)
-    .json("Codigo de Back Para Compras Listo y a la Esperza de Compra");
+  return res.status(200).json("Ruta Base Configurada");
 });
 
-app.post("/create_preference", async (req, res) => {
+app.post("/prueba", async (req, res) => {
   try {
     const body = {
       items: [
         {
           title: req.body.title,
           quantify: Number(req.body.quantify),
-          unit_price: Number(req.body.unit_price),
+          unit_price: Number(req.body.price),
           currency_id: "ARS",
         },
       ],
@@ -43,5 +44,5 @@ app.post("/create_preference", async (req, res) => {
 });
 
 app.listen(3001, () => {
-  console.log(`Servidor Escuchando en el puerto ${port}`);
+  console.log(`Servidor Escuchando en el puerto`);
 });
